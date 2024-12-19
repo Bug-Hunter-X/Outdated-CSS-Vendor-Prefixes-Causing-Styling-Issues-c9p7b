@@ -1,0 +1,21 @@
+The solution is to remove unnecessary vendor prefixes from CSS properties. Modern browsers support standard CSS properties without vendor prefixes.  Here's how to fix the bug:
+
+**Incorrect (bug.css):**
+
+```css
+div {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  transform: translateX(10px); /* Correct, but prefixed versions are redundant */
+}
+```
+
+**Corrected (bugSolution.css):**
+
+```css
+div {
+  transform: translateX(10px);
+}
+```
+
+Always refer to the latest CSS specifications and browser compatibility tables to ensure your CSS is up-to-date and avoids unnecessary prefixes.
